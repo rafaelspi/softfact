@@ -32,7 +32,7 @@ public class ProjetoQueryServiceImpl implements ProjetoQueryService {
    @Override
    public ProjetoResponse buscarPorId(Long id) {
        return repo.findById(id).map(this::toResponse)
-               .orElseThrow(() -> new EntityNotFoundException("Projeto não encontrado: " + id));
+               .orElseThrow(() -> new EntityNotFoundException("Projeto.java não encontrado: " + id));
    }
 
 

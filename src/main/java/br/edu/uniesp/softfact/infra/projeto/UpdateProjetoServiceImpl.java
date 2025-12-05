@@ -47,7 +47,7 @@ public class UpdateProjetoServiceImpl implements UpdateProjetoService {
    @Override
    public ProjetoResponse atualizar(Long id, Projeto dto) {
        ProjetoEntity existente = repo.findById(id)
-               .orElseThrow(() -> new EntityNotFoundException("Projeto não encontrado: " + id));
+               .orElseThrow(() -> new EntityNotFoundException("Projeto.java não encontrado: " + id));
 
 
        existente.setNome(dto.getNome());
@@ -68,7 +68,7 @@ public class UpdateProjetoServiceImpl implements UpdateProjetoService {
 
    @Override
    public void excluir(Long id) {
-       if (!repo.existsById(id)) throw new EntityNotFoundException("Projeto não encontrado: " + id);
+       if (!repo.existsById(id)) throw new EntityNotFoundException("Projeto.java não encontrado: " + id);
        repo.deleteById(id);
    }
 
